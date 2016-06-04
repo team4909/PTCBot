@@ -61,7 +61,7 @@ public class Drivetrain extends Subsystem {
     
     public void doADonut(double speed)
     {
-    	driveControl.drive(speed, 0.283);
+    	driveControl.drive(-speed, 0.283*1.3);
     }
     // Put methods for controlling this subsystem
     // here. Call these from Commands.

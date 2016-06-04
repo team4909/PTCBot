@@ -58,6 +58,7 @@ public class OI {
     public JoystickButton moatButton;
     public JoystickButton driveButton;
     public JoystickButton slowButton;
+    public JoystickButton doADonutButton;
 
     public Joystick controller;
 
@@ -77,7 +78,8 @@ public class OI {
         moatButton = new JoystickButton(controller, 1);
         moatButton.whenPressed(new CrossMoat());
         
-        
+        doADonutButton = new JoystickButton(controller, 8);
+        doADonutButton.whenPressed(new AutonomousCommand());
 
 
         // SmartDashboard Buttons
