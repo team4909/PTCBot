@@ -53,6 +53,13 @@ public class Drivetrain extends Subsystem {
 
     }
 
+    public void tankDriveMedium(){
+    	double left = Robot.oi.getLeftY()*.75;
+    	double right = Robot.oi.getRightY()*.75;
+    	driveControl.tankDrive(left, right);
+    	Robot.oi.vibrate((float)((Math.abs(left)+Math.abs(right))/2));
+
+    }
     
     public void drive(double left, double right)
     {
