@@ -103,7 +103,7 @@ public class OI {
         return y*Math.abs(y)*.65;
     }
     public double getRightY() {
-    	double y = controller.getRawAxis(2);
+    	double y = controller.getRawAxis(4);
     	if(Math.abs(y)<.075)
     		return 0;
         return y*Math.abs(y)*.65;
