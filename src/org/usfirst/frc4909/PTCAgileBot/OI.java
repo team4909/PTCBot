@@ -15,7 +15,6 @@ import org.usfirst.frc4909.PTCAgileBot.commands.*;
 
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import edu.wpi.first.wpilibj.Joystick;
-import edu.wpi.first.wpilibj.Joystick.RumbleType;
 import edu.wpi.first.wpilibj.buttons.*;
 
 import org.usfirst.frc4909.PTCAgileBot.subsystems.*;
@@ -101,21 +100,21 @@ public class OI {
     	double y = controller.getRawAxis(1);
     	if(Math.abs(y)<.075)
     		return 0;
-        return y*Math.abs(y);
+        return y*Math.abs(y)*.65;
     }
     public double getRightY() {
-    	double y = controller.getRawAxis(5);
+    	double y = controller.getRawAxis(2);
     	if(Math.abs(y)<.075)
     		return 0;
-        return y*Math.abs(y);
+        return y*Math.abs(y)*.65;
     }
     public double getRightTrigger(){
     	double y = controller.getRawAxis(3);
     	return Math.abs(y);
     }
     public void vibrate(float intensity){
-    	controller.setRumble(Joystick.RumbleType.kLeftRumble, intensity);
-    	controller.setRumble(Joystick.RumbleType.kRightRumble, intensity);
+    //	controller.setRumble(Joystick.RumbleType.kLeftRumble, intensity);
+    	// controller.setRumble(Joystick.RumbleType.kRightRumble, intensity);
 
     	
     }

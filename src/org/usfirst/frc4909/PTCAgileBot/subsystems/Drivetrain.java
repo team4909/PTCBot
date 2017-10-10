@@ -41,7 +41,7 @@ public class Drivetrain extends Subsystem {
     public void tankDrive(){
     	double left = Robot.oi.getLeftY()*(1-Robot.oi.getRightTrigger()/2);
     	double right = Robot.oi.getRightY()*(1-Robot.oi.getRightTrigger()/2);
-    	driveControl.tankDrive(left, right);
+    	this.drive(left, right);
     	Robot.oi.vibrate((float)((Math.abs(left)+Math.abs(right))/2));
     }
     
@@ -63,7 +63,7 @@ public class Drivetrain extends Subsystem {
     
     public void drive(double left, double right)
     {
-    	driveControl.tankDrive(left, right);    	
+    	driveControl.arcadeDrive(-left, right);    	
     }
     
     public void doADonut(double speed)
